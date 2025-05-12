@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Future's Bakery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fff0f5;
+      color: #7a4c58;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1578985545062-69928b1d9587') center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+    header h1 {
+      font-size: 3rem;
+      background-color: rgba(0,0,0,0.4);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .intro {
+      text-align: center;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .about, .contact {
+      background-color: #ffe6f0;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    footer {
+      background-color: #ffc0cb;
+      text-align: center;
+      padding: 1rem;
+      font-weight: bold;
+      color: #7a4c58;
+    }
+  </style>
+
+  <!-- Watson Assistant Chat Integration -->
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "bf8f7b51-a2c1-4ca4-bb40-027af795e883", // The ID of this integration.
+      region: "us-south", // The region your integration is hosted in.
+      serviceInstanceID: "ec227577-fbeb-4156-bfec-f596e16f84d9", // The ID of your service instance.
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Welcome to Future's Bakery ♥</h1>
+  </header>
+
+  <section class="intro">
+    <h2>Freshly Baked with Love</h2>
+    <p>At Future's Bakery, we blend tradition and innovation to bring you the finest baked goods every day. From sourdough to sweet rolls, we have something for everyone.</p>
+  </section>
+
+  <section>
+    <h2>Our Favorites</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=3544&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bread">
+      <img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?q=80&w=3392&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cake">
+      <img src="https://images.unsplash.com/photo-1582461833047-2aeb4f8af173?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pastries">
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>About Us</h2>
+    <p>Future’s Bakery started as a small family business with a passion for baking and a dream to serve our community. Today, we continue that legacy with artisan recipes and friendly service. Our mission is to bring comfort, joy, and quality to every bite.</p>
+  </section>
+
+  <section class="contact">
+    <h2>Talk to Us!</h2>
+    <p>Got a question about ingredients, orders, or custom cakes? Use the chat icon below to talk to our virtual assistant powered by IBM Watson. We're happy to help!</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Future's Bakery. Baked with ♥ in your neighborhood.
+  </footer>
+</body>
+</html>
